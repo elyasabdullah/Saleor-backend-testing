@@ -1,0 +1,12 @@
+mutation BranchMemberMove($input: BranchMemberMoveInput!) {
+  branchMemberMove(input: $input) {
+    success
+    targetBranchId
+    userIds
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

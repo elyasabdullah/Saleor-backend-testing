@@ -1,0 +1,14 @@
+#import "../../fragments/UserFields/UserFields.graphql"
+
+mutation PermissionsRevokeFromUser($id: ID!, $permissionCodenames: [String]!) {
+  permissionsRevokeFromUser(id: $id, permissionCodenames: $permissionCodenames) {
+    user {
+      ...UserFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

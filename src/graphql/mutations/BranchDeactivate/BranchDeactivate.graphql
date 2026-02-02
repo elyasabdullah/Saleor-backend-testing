@@ -1,0 +1,14 @@
+#import "../../fragments/BranchFields/BranchFields.graphql"
+
+mutation BranchDeactivate($id: ID!) {
+  branchDeactivate(id: $id) {
+    branch {
+      ...BranchFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

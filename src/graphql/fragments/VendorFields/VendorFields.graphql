@@ -1,0 +1,16 @@
+# Fragment for common vendor fields
+fragment VendorFields on Vendor {
+  id
+  name
+  description
+  logo
+  isActive
+  owner {
+    id
+    email
+    firstName
+    lastName
+  }
+  createdAt
+  updatedAt
+}

@@ -1,0 +1,10 @@
+mutation OTPSend($input: OTPSendInput!) {
+  otpSend(input: $input) {
+    success
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

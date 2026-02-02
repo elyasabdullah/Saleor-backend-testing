@@ -1,0 +1,18 @@
+#import "../../fragments/BranchFields/BranchFields.graphql"
+
+query GetBranches($before: String, $after: String, $first: Int, $last: Int) {
+  branches(before: $before, after: $after, first: $first, last: $last) {
+    edges {
+      node {
+        ...BranchFields
+      }
+      cursor
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+  }
+}

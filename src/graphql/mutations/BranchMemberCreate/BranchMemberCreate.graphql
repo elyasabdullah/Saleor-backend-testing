@@ -1,0 +1,12 @@
+mutation BranchMemberCreate($inputs: [BranchMemberCreateInput!]!) {
+  branchMemberCreate(inputs: $inputs) {
+    success
+    branchIds
+    userIds
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

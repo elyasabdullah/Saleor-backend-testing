@@ -1,0 +1,10 @@
+mutation TokenVerify($accessToken: String!, $token: String!) {
+  tokenVerify(accessToken: $accessToken, token: $token) {
+    isValid
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

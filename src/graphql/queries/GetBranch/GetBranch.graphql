@@ -1,0 +1,7 @@
+#import "../../fragments/BranchFields/BranchFields.graphql"
+
+query GetBranch($id: ID!) {
+  branch(id: $id) {
+    ...BranchFields
+  }
+}

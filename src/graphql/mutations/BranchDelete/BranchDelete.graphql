@@ -1,0 +1,10 @@
+mutation BranchDelete($id: ID!) {
+  branchDelete(id: $id) {
+    success
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

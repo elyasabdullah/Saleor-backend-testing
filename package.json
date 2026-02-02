@@ -1,0 +1,50 @@
+{
+  "name": "y",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "generate": "graphql-codegen --debug",
+    "download-schema": "get-graphql-schema https://api.dev2.wasfatyplus.com/StoreFront/graphql/ > src/schema.graphql && node scripts/fix-schema.js",
+    "codegen": "npm run download-schema && npm run generate"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.14.0",
+    "graphql": "^16.8.0",
+    "graphql-tag": "^2.12.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.71.1",
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@graphql-codegen/add": "^5.0.2",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/import-types-preset": "^3.0.1",
+    "@graphql-codegen/named-operations-object": "^3.1.1",
+    "@graphql-codegen/near-operation-file-preset": "^3.0.0",
+    "@graphql-codegen/typescript": "^4.0.5",
+    "@graphql-codegen/typescript-operations": "^4.1.3",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "get-graphql-schema": "^2.1.2",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
+  }
+}

@@ -1,0 +1,15 @@
+mutation VendorApplicationCreate($input: VendorApplicationCreateInput!) {
+  vendorApplicationCreate(input: $input) {
+    success
+    vendorApplication {
+      id
+      status
+      createdAt
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

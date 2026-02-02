@@ -1,0 +1,10 @@
+mutation UserLogout($refreshToken: String!) {
+  userLogout(refreshToken: $refreshToken) {
+    success
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

@@ -1,0 +1,21 @@
+mutation VendorBankInfoCreate($input: VendorBankInfoInput!, $vendorId: ID!) {
+  vendorBankInfoCreate(input: $input, vendorId: $vendorId) {
+    success
+    vendorBankInfo {
+      id
+      accountName
+      accountNumber
+      bankName
+      iban
+      vendor {
+        id
+        name
+      }
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

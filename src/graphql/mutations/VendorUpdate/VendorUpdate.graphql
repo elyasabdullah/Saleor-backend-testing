@@ -1,0 +1,14 @@
+#import "../../fragments/VendorFields/VendorFields.graphql"
+
+mutation VendorUpdate($id: ID!, $input: VendorUpdateInput!) {
+  vendorUpdate(id: $id, input: $input) {
+    vendor {
+      ...VendorFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

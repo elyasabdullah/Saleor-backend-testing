@@ -1,0 +1,10 @@
+mutation VendorDelete($id: ID!) {
+  vendorDelete(id: $id) {
+    success
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

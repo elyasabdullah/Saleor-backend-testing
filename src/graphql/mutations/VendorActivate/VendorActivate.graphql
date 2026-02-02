@@ -1,0 +1,14 @@
+#import "../../fragments/VendorFields/VendorFields.graphql"
+
+mutation VendorActivate($id: ID!) {
+  vendorActivate(id: $id) {
+    vendor {
+      ...VendorFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

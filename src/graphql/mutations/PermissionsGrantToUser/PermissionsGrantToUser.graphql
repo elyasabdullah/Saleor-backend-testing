@@ -1,0 +1,14 @@
+#import "../../fragments/UserFields/UserFields.graphql"
+
+mutation PermissionsGrantToUser($id: ID!, $permissionCodenames: [String]!) {
+  permissionsGrantToUser(id: $id, permissionCodenames: $permissionCodenames) {
+    user {
+      ...UserFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#import "../../fragments/UserFields/UserFields.graphql"
+
+mutation VendorUsersCreate($emails: [String]!) {
+  vendorUsersCreate(emails: $emails) {
+    users {
+      ...UserFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

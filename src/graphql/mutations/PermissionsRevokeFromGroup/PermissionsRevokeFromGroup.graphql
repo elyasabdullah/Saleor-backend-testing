@@ -1,0 +1,13 @@
+mutation PermissionsRevokeFromGroup($id: ID!, $permissionCodenames: [String]!) {
+  permissionsRevokeFromGroup(id: $id, permissionCodenames: $permissionCodenames) {
+    group {
+      id
+      name
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

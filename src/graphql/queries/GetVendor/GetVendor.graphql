@@ -1,0 +1,7 @@
+#import "../../fragments/VendorFields/VendorFields.graphql"
+
+query GetVendor($id: ID!) {
+  vendor(id: $id) {
+    ...VendorFields
+  }
+}

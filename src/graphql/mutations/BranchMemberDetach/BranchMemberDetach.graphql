@@ -1,0 +1,11 @@
+mutation BranchMemberDetach($input: BranchMemberDetachInput!) {
+  branchMemberDetach(input: $input) {
+    success
+    userIds
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

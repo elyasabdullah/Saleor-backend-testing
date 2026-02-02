@@ -1,0 +1,18 @@
+#import "../../fragments/UserFields/UserFields.graphql"
+
+query GetUsers($where: UserWhereInput, $before: String, $after: String, $first: Int, $last: Int) {
+  users(where: $where, before: $before, after: $after, first: $first, last: $last) {
+    edges {
+      node {
+        ...UserFields
+      }
+      cursor
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+  }
+}

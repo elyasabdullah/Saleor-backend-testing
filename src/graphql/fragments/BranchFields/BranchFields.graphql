@@ -1,0 +1,30 @@
+# Fragment for common branch fields
+fragment BranchFields on Branch {
+  id
+  name
+  nameAr
+  description
+  type
+  isActive
+  isMarketplaceEnabled
+  contactPhoneNumber
+  contactEmail
+  vendor {
+    id
+    name
+  }
+  manager {
+    id
+    email
+    firstName
+    lastName
+  }
+  streetAddress1
+  streetAddress2
+  area
+  district
+  region
+  postalCode
+  createdAt
+  updatedAt
+}

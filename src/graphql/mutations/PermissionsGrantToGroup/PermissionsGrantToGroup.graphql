@@ -1,0 +1,13 @@
+mutation PermissionsGrantToGroup($id: ID!, $permissionCodenames: [String]!) {
+  permissionsGrantToGroup(id: $id, permissionCodenames: $permissionCodenames) {
+    group {
+      id
+      name
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

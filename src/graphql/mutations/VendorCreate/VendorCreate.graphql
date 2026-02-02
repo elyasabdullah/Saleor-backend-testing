@@ -1,0 +1,14 @@
+#import "../../fragments/VendorFields/VendorFields.graphql"
+
+mutation VendorCreate($input: VendorCreateInput!, $ownerId: ID!) {
+  vendorCreate(input: $input, ownerId: $ownerId) {
+    vendor {
+      ...VendorFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mutation BranchMemberAttach($inputs: [BranchMemberAttachInput!]!) {
+  branchMemberAttach(inputs: $inputs) {
+    success
+    branchIds
+    userIds
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

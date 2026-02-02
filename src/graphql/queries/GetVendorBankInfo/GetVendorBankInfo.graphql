@@ -1,0 +1,17 @@
+query GetVendorBankInfo($id: ID!) {
+  vendorBankInfo(id: $id) {
+    edges {
+      node {
+        id
+        accountName
+        accountNumber
+        bankName
+        iban
+        vendor {
+          id
+          name
+        }
+      }
+    }
+  }
+}

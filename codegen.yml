@@ -1,0 +1,34 @@
+schema:
+  - ./src/schema.graphql
+
+generates:
+  ./src/graphql/types.ts:
+    schema: ./src/schema.graphql
+    config:
+      preResolveTypes: true
+      skipTypename: true
+      enumsAsTypes: true
+    plugins:
+      - typescript
+      - add:
+          content: "/* eslint-disable */\n/* prettier-ignore */"
+
+  ./src/graphql:
+    preset: near-operation-file
+    documents:
+      - "./src/graphql/**/*.graphql"
+    presetConfig:
+      extension: .tsx
+      baseTypesPath: ./types.ts
+      folder: __generated__
+    config:
+      withHooks: true
+      withComponent: false
+      withHOC: false
+      skipTypename: true
+      enumsAsTypes: true
+    plugins:
+      - add:
+          content: "/* eslint-disable */\n/* prettier-ignore */"
+      - typescript-operations
+      - typescript-react-apollo

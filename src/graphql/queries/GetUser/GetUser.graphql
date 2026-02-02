@@ -1,0 +1,7 @@
+#import "../../fragments/UserFields/UserFields.graphql"
+
+query GetUser($id: ID, $email: String, $externalReference: String) {
+  user(id: $id, email: $email, externalReference: $externalReference) {
+    ...UserFields
+  }
+}

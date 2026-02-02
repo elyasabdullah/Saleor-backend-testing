@@ -1,0 +1,14 @@
+#import "../../fragments/BranchFields/BranchFields.graphql"
+
+mutation BranchUpdate($id: ID!, $input: BranchInput!) {
+  branchUpdate(id: $id, input: $input) {
+    branch {
+      ...BranchFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

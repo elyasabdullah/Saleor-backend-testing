@@ -1,0 +1,26 @@
+#import "../../fragments/UserFields/UserFields.graphql"
+
+query GetBranchMembers(
+  $branchId: ID!
+  $firstName: String
+  $lastName: String
+  $email: String
+  $phoneNumber: String
+) {
+  branchMembers(
+    branchId: $branchId
+    firstName: $firstName
+    lastName: $lastName
+    email: $email
+    phoneNumber: $phoneNumber
+  ) {
+    id
+    user {
+      ...UserFields
+    }
+    branch {
+      id
+      name
+    }
+  }
+}

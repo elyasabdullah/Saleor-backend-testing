@@ -1,0 +1,20 @@
+mutation VendorBankInfoUpdate($id: ID!, $input: VendorBankInfoUpdateInput!) {
+  vendorBankInfoUpdate(id: $id, input: $input) {
+    vendorBankInfo {
+      id
+      accountName
+      accountNumber
+      bankName
+      iban
+      vendor {
+        id
+        name
+      }
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

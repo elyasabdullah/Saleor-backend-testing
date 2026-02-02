@@ -1,0 +1,15 @@
+mutation VendorApplicationStartReview($id: ID!) {
+  vendorApplicationStartReview(id: $id) {
+    success
+    vendorApplication {
+      id
+      status
+      reviewedAt
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

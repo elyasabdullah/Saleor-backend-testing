@@ -1,0 +1,15 @@
+# Fragment for common user fields
+fragment UserFields on User {
+  id
+  email
+  firstName
+  lastName
+  isStaff
+  isActive
+  role
+  accountType
+  emailVerified
+  phoneNumber
+  dateJoined
+  lastLogin
+}

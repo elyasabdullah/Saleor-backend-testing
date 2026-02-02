@@ -1,0 +1,18 @@
+query GetVendorApplication($id: ID!) {
+  vendorApplication(id: $id) {
+    edges {
+      node {
+        id
+        status
+        rejectionReason
+        reviewedAt
+        owner {
+          id
+          email
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}

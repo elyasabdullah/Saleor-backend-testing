@@ -1,0 +1,15 @@
+mutation VendorApplicationReject($id: ID!, $rejectionReason: String) {
+  vendorApplicationReject(id: $id, rejectionReason: $rejectionReason) {
+    success
+    vendorApplication {
+      id
+      status
+      reviewedAt
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

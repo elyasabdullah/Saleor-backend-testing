@@ -1,0 +1,21 @@
+mutation TokenCreate($email: String!, $password: String!) {
+  tokenCreate(email: $email, password: $password) {
+    token
+    refreshToken
+    csrfToken
+    user {
+      id
+      firstName
+      lastName
+      email
+      role
+      isActive
+      emailVerified
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

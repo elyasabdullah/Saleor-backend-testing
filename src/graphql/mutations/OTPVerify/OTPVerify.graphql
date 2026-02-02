@@ -1,0 +1,11 @@
+mutation OTPVerify($input: OTPVerifyInput!) {
+  otpVerify(input: $input) {
+    success
+    token
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

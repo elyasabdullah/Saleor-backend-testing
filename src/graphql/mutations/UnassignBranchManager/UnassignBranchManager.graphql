@@ -1,0 +1,14 @@
+#import "../../fragments/BranchFields/BranchFields.graphql"
+
+mutation UnassignBranchManager($input: BranchUnassginManagerInput!) {
+  branchUnassginManager(input: $input) {
+    branch {
+      ...BranchFields
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+}

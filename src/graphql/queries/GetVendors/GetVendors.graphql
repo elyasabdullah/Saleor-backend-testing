@@ -1,0 +1,18 @@
+#import "../../fragments/VendorFields/VendorFields.graphql"
+
+query GetVendors($before: String, $after: String, $first: Int, $last: Int) {
+  vendors(before: $before, after: $after, first: $first, last: $last) {
+    edges {
+      node {
+        ...VendorFields
+      }
+      cursor
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+  }
+}
