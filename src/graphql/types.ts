@@ -2005,7 +2005,7 @@ export type AssignedSwatchAttributeValue = {
   file?: Maybe<File>;
   /** Hex color code. */
   hexColor?: Maybe<Scalars['String']['output']>;
-  /** Name of the selected swatch value.  */
+  /** Name of the selected swatch value. */
   name?: Maybe<Scalars['String']['output']>;
   /** Slug of the selected swatch value. */
   slug?: Maybe<Scalars['String']['output']>;
@@ -5267,7 +5267,7 @@ export type CheckoutLineDelete = {
 };
 
 export type CheckoutLineInput = {
-  /** Flag that allow force splitting the same variant into multiple lines by skipping the matching logic.  */
+  /** Flag that allow force splitting the same variant into multiple lines by skipping the matching logic. */
   forceNewLine?: InputMaybe<Scalars['Boolean']['input']>;
   /**
    * Fields required to update the object's metadata. Can be read by any API client
@@ -16859,7 +16859,7 @@ export type OrderEventsEmailsEnum =
   | 'SHIPPING_CONFIRMATION'
   | 'TRACKING_UPDATED';
 
-/** The different order event types.  */
+/** The different order event types. */
 export type OrderEventsEnum =
   | 'ADDED_PRODUCTS'
   | 'CANCELED'
@@ -17483,7 +17483,7 @@ export type OrderLineThumbnailArgs = {
 };
 
 export type OrderLineCreateInput = {
-  /** Flag that allow force splitting the same variant into multiple lines by skipping the matching logic.  */
+  /** Flag that allow force splitting the same variant into multiple lines by skipping the matching logic. */
   forceNewLine?: InputMaybe<Scalars['Boolean']['input']>;
   /** Custom price of the item.When the line with the same variant will be provided multiple times, the last price will be used. */
   price?: InputMaybe<Scalars['PositiveDecimal']['input']>;
@@ -19292,7 +19292,7 @@ export type PaymentGatewayInitializeTokenizationResult =
   | 'FAILED_TO_INITIALIZE'
   | 'SUCCESSFULLY_INITIALIZED';
 
-/** Event sent to initialize a new session in payment gateway to store the payment method.  */
+/** Event sent to initialize a new session in payment gateway to store the payment method. */
 export type PaymentGatewayInitializeTokenizationSession = Event & {
   /** Channel related to the requested action. */
   channel: Channel;
@@ -29256,7 +29256,7 @@ export type TransactionKind =
   | 'REFUND_ONGOING'
   | 'VOID';
 
-/** Processes a transaction session. It triggers the webhook `TRANSACTION_PROCESS_SESSION`, to the assigned `paymentGateways`.  */
+/** Processes a transaction session. It triggers the webhook `TRANSACTION_PROCESS_SESSION`, to the assigned `paymentGateways`. */
 export type TransactionProcess = {
   /** The json data required to finalize the payment. */
   data?: Maybe<Scalars['JSON']['output']>;

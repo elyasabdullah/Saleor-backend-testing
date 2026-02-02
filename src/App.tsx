@@ -5,14 +5,10 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Products from "./pages/Products";
 
 // Create HTTP link
 const httpLink = createHttpLink({
@@ -74,18 +70,20 @@ function Home() {
                 Welcome to Saleor Marketplace
               </h2>
               <p className="text-gray-600">You are now logged in!</p>
+              <div className="mt-6">
+                <Link
+                  to="/products"
+                  className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+                >
+                  View Products
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </main>
     </div>
   );
-}
-
-// Protected Route component
-function ProtectedRoute({ children }: { children: React.ReactNode }) {
-  const token = localStorage.getItem("token");
-  return token ? <>{children}</> : <Navigate to="/login" />;
 }
 
 function App() {
@@ -95,14 +93,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </Router>
     </ApolloProvider>
