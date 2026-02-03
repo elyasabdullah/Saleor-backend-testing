@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "generate": "graphql-codegen --debug",
     "download-schema": "get-graphql-schema https://api.dev2.wasfatyplus.com/StoreFront/graphql/ > src/schema.graphql && node scripts/fix-schema.js",
-    "codegen": "npm run download-schema && npm run generate"
+    "codegen": "npm run download-schema && npm run generate",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.14.0",
@@ -45,6 +46,7 @@
     "tailwindcss": "^3.4.19",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "husky": "^9.1.7"
   }
 }
